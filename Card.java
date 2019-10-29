@@ -48,11 +48,6 @@ public class Card
         }
     }
 
-    public ArrayList<Integer> getDamages()
-    {
-        return this.damages;
-    }
-
     public int getHealth()
     {
         return this.health;
