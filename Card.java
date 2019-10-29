@@ -19,14 +19,14 @@ public class Card
             type = "wind";
             moves.add("\n(0)Rasengan -15hp");
             damages.add(-15);
-            moves.add("\n(1)Wind Rasengan -20hp");
-            damages.add(-20);
+            moves.add("\n(1)Wind Rasengan -25hp");
+            damages.add(-25);
             moves.add("\n(2)Nine tails mode +10dp to all moves, lasts 2 turn");
             damages.add(-10);
             moves.add("\n(3)Substitution evades all damage on next turn (can only be used 3 times)");
             damages.add(0);
             moves.add("\n(4)Shadow clone -10hp and 25% chance of damage evasion");
-            damages.add(-10);
+            damages.add(-15);
             moves.add("\n(5)Infuse chakra +50 cp");
             damages.add(50);
         }
@@ -76,6 +76,16 @@ public class Card
     public ArrayList<Integer> getdamages()
     {
         return this.damages;
+    }
+
+    public String getMove(int num)
+    {
+        return moves.get(num);
+    }
+
+    public ArrayList<String> getMoves()
+    {
+        return moves;
     }
 
     @Override
