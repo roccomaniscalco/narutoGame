@@ -14,6 +14,7 @@ public class Card
 
         chakra = 250;
         health = 175;
+
         damageModifier = 0;
 
         if(name.equals("Naruto"))
@@ -32,6 +33,7 @@ public class Card
             moves.add("\n(5)Infuse chakra +50 cp");
             damages.add(50);
         }
+
         else if(name.equals("Sasuke"))
         {
             type = "lightning";
@@ -50,11 +52,12 @@ public class Card
         }
     }
 
+
     public ArrayList<Integer> getDamages()
     {
         return this.damages;
     }
-
+  
     public int getHealth()
     {
         return this.health;
@@ -67,11 +70,12 @@ public class Card
 
     public void setChakra(int chakra)
     {
-        this.chakra += chakra;
+        this.chakra += chakra
     }
 
     public void setHealth(int health)
     {
+
         this.health += health;
     }
 
@@ -89,6 +93,7 @@ public class Card
     {
         return moves;
     }
+
 
     public void setDamageModifier(int damageModifier)
     {
