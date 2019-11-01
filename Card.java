@@ -6,15 +6,17 @@ public class Card
     private int health, chakra;
     private ArrayList<String> moves = new ArrayList<String>();
     private ArrayList<Integer> damages = new ArrayList<Integer>();
+    private int damageModifier;
 
-    Card(String name)
+    public Card(String name)
     {
         this.name = name;
 
         chakra = 250;
         health = 175;
+        damageModifier = 0;
 
-        if(name == "Naruto")
+        if(name.equals("Naruto"))
         {
             type = "wind";
             moves.add("\n(0)Rasengan -15hp");
@@ -30,7 +32,7 @@ public class Card
             moves.add("\n(5)Infuse chakra +50 cp");
             damages.add(50);
         }
-        else if(name == "Sauske")
+        else if(name.equals("Sasuke"))
         {
             type = "lightning";
             moves.add("\n(0)Chidori -15hp");
@@ -65,17 +67,37 @@ public class Card
 
     public void setChakra(int chakra)
     {
-        this.chakra = chakra;
+        this.chakra += chakra;
     }
 
     public void setHealth(int health)
     {
-        this.health = health;
+        this.health += health;
     }
 
     public ArrayList<Integer> getdamages()
     {
         return this.damages;
+    }
+
+    public String getMove(int num)
+    {
+        return moves.get(num);
+    }
+
+    public ArrayList<String> getMoves()
+    {
+        return moves;
+    }
+
+    public void setDamageModifier(int damageModifier)
+    {
+        this.damageModifier += damageModifier;
+    }
+
+    public int getDamageModifier()
+    {
+        return damageModifier;
     }
 
     @Override
